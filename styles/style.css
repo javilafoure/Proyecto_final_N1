@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+    background-color: #f0f4f8;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+button.custom-button {
+    background-color: #f7da47;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+}
+
+button.custom-button:hover {
+    background-color: #f2cf23;
+}
+
+.results h4 {
+    font-size: 20px;
+    color: #333;
+}
+
+.results p {
+    font-size: 16px;
+    margin: 0;
+    color: #555;
+}
+
+/* Estilos para escritorio */
+@media (min-width: 992px) {
+    .card {
+        height: auto;
+    }
+
+    .custom-button {
+        background-color: #f7da47;
+    }
+
+    .custom-button:hover {
+        background-color: #f2cf23;
+    }
+}
