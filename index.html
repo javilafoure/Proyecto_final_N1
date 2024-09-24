@@ -13,24 +13,29 @@
     <div class="cuerpo d-flex align-items-center justify-content-center">
         <div class="card_container card d-flex w-100 h-100 flex-md-row align-items-md-center justify-content-md-center"
             style="width: 18rem;">
-            <div class="card-body tamaño w-100 h-100">
-                <h2 class="text-center mb-4">Mortgage Calculator</h2>
+            <div class="card-body tamaño w-100 h-100 p-4">
+                <div class="d-flex flex-column align-items-start flex-md-row align-items-md-center justify-content-md-between mb-4">
+                    <h2 class="text-center">Mortgage Calculator</h2>
+                    <a href="">Clear all</a>
+                </div>
                 <form>
                     <div class="mb-3">
                         <label for="mortgageAmount" class="form-label">Mortgage Amount</label>
                         <input type="number" class="form-control" id="mortgageAmount" placeholder="£">
                     </div>
-                    <div class="mb-3">
-                        <label for="mortgageTerm" class="form-label">Mortgage Term</label>
-                        <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
-                    </div>
-                    <div class="mb-3">
-                        <label for="interestRate" class="form-label">Interest Rate</label>
-                        <input type="number" class="form-control" id="interestRate" placeholder="%">
+                    <div class="d-md-flex justify-content-md-between gap-3">
+                        <div class="mb-3">
+                            <label for="mortgageTerm" class="form-label">Mortgage Term</label>
+                            <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
+                        </div>
+                        <div class="mb-3">
+                            <label for="interestRate" class="form-label">Interest Rate</label>
+                            <input type="number" class="form-control" id="interestRate" placeholder="%">
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="mortgageType" class="form-label">Mortgage Type</label>
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column my-4">
                             <div>
                                 <input type="radio" id="repayment" name="mortgageType" value="repayment" checked>
                                 <label for="repayment" class="me-3">Repayment</label>
@@ -42,7 +47,7 @@
 
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 custom-button">Calculate Repayments</button>
+                    <button type="submit" class="btn btn-primary w-100 custom-button my-4">Calculate Repayments</button>
                 </form>
             </div>
             <div class="card_result card tamaño w-100 h-100 fondo d-flex align-items-center justify-content-center">

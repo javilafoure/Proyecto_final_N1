@@ -29,7 +29,7 @@
 
 @media (min-width: 768px) {
     .card_container {
-        width: 50vw !important;
+        width: 55% !important;
         height: 70vh !important;
     }
 
