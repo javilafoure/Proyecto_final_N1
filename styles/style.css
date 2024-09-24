@@ -30,7 +30,7 @@
 @media (min-width: 768px) {
     .card_container {
         width: 50vw !important;
-        height: 50vh !important;
+        height: 60% !important;
     }
 
     .tamaño {
