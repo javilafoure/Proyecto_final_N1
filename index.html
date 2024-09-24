@@ -4,94 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mortgage Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
 </head>
 
 <body>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <!-- Versión móvil -->
-            <div class="col-12 d-lg-none">
-                <div class="card p-4 shadow" style="border-radius: 10px;">
-                    <h2 class="text-center mb-4">Mortgage Calculator</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="mortgageAmount" class="form-label">Mortgage Amount</label>
-                            <input type="number" class="form-control" id="mortgageAmount" placeholder="£">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mortgageTerm" class="form-label">Mortgage Term</label>
-                            <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
-                        </div>
-                        <div class="mb-3">
-                            <label for="interestRate" class="form-label">Interest Rate</label>
-                            <input type="number" class="form-control" id="interestRate" placeholder="%">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mortgageType" class="form-label">Mortgage Type</label>
+    <div class="cuerpo d-flex align-items-center justify-content-center">
+        <div class="card_container card d-flex w-100 h-100 flex-md-row align-items-md-center justify-content-md-center"
+            style="width: 18rem;">
+            <div class="card-body tamaño w-100 h-100">
+                <h2 class="text-center mb-4">Mortgage Calculator</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="mortgageAmount" class="form-label">Mortgage Amount</label>
+                        <input type="number" class="form-control" id="mortgageAmount" placeholder="£">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mortgageTerm" class="form-label">Mortgage Term</label>
+                        <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
+                    </div>
+                    <div class="mb-3">
+                        <label for="interestRate" class="form-label">Interest Rate</label>
+                        <input type="number" class="form-control" id="interestRate" placeholder="%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mortgageType" class="form-label">Mortgage Type</label>
+                        <div class="d-flex flex-column">
                             <div>
                                 <input type="radio" id="repayment" name="mortgageType" value="repayment" checked>
                                 <label for="repayment" class="me-3">Repayment</label>
+                            </div>
+                            <div>
                                 <input type="radio" id="interestOnly" name="mortgageType" value="interestOnly">
                                 <label for="interestOnly">Interest Only</label>
                             </div>
+
                         </div>
-                        <button type="submit" class="btn btn-primary w-100 custom-button">Calculate Repayments</button>
-                    </form>
-                    <div class="mt-4 results">
-                        <h4>Your Results</h4>
-                        <p>Monthly Payment: <strong>£1,797.74</strong></p>
-                        <p>Total Payment: <strong>£539,322.94</strong></p>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary w-100 custom-button">Calculate Repayments</button>
+                </form>
             </div>
-
-            <!-- Versión escritorio -->
-            <div class="col-10 col-lg-8 d-none d-lg-flex justify-content-center">
-                <div class="card p-4 shadow col-6" style="border-radius: 10px;">
-                    <h2 class="text-center mb-4">Mortgage Calculator</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="mortgageAmount" class="form-label">Mortgage Amount</label>
-                            <input type="number" class="form-control" id="mortgageAmount" placeholder="£">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mortgageTerm" class="form-label">Mortgage Term</label>
-                            <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
-                        </div>
-                        <div class="mb-3">
-                            <label for="interestRate" class="form-label">Interest Rate</label>
-                            <input type="number" class="form-control" id="interestRate" placeholder="%">
-                        </div>
-                        <div class="mb-3">
-                            <label for="mortgageType" class="form-label">Mortgage Type</label>
-                            <div>
-                                <input type="radio" id="repayment" name="mortgageType" value="repayment" checked>
-                                <label for="repayment" class="me-3">Repayment</label>
-                                <input type="radio" id="interestOnly" name="mortgageType" value="interestOnly">
-                                <label for="interestOnly">Interest Only</label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100 custom-button">Calculate Repayments</button>
-                    </form>
+            <div class="card_result card tamaño w-100 h-100 fondo d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <img src="./images/illustration-empty.svg" alt="Results Illustration" class="mb-3">
+                    <h4>Results shown here</h4>
+                    <p>Complete the form and click "calculate repayments" to see what your monthly repayments would
+                        be.</p>
                 </div>
-                <div class="card p-4 shadow col-5 d-flex align-items-center justify-content-center"
-                    style="border-radius: 10px;">
-                    <div class="text-center">
-                        <img src="https://via.placeholder.com/150" alt="Results Illustration" class="mb-3">
-                        <h4>Results shown here</h4>
-                        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would
-                            be.</p>
-                    </div>
+                <div class="mt-4 results">
+                    <h4>Your Results</h4>
+                    <p>Monthly Payment: <strong>£1,797.74</strong></p>
+                    <p>Total Payment: <strong>£539,322.94</strong></p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 
 </html>
