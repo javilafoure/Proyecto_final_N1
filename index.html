@@ -14,45 +14,60 @@
         <div class="card_container card d-flex w-100 h-100 flex-md-row align-items-md-center justify-content-md-center"
             style="width: 18rem;">
             <div class="card-body tamaño w-100 h-100 p-4">
-                <div class="d-flex flex-column align-items-start flex-md-row align-items-md-center justify-content-md-between mb-4">
+                <div
+                    class="d-flex flex-column align-items-start flex-md-row align-items-md-center justify-content-md-between mb-4">
                     <h2 class="text-center">Mortgage Calculator</h2>
-                    <a href="">Clear all</a>
+                    <a class="color_text" href="">Clear all</a>
                 </div>
                 <form>
                     <div class="mb-3">
-                        <label for="mortgageAmount" class="form-label">Mortgage Amount</label>
-                        <label for="" class="moneda">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                              </svg>
-                              <input type="text">
+                        <label for="mortgageAmount" class="form-label color_text">Mortgage Amount</label>
+                        <label for="" class="moneda d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <input class="borde" type="text">
                         </label>
                     </div>
                     <div class="d-md-flex justify-content-md-between gap-3">
                         <div class="mb-3">
-                            <label for="mortgageTerm" class="form-label">Mortgage Term</label>
-                            <input type="number" class="form-control" id="mortgageTerm" placeholder="years">
+                            <label for="mortgageTerm" class="form-label color_text">Mortgage Term</label>
+                            <label for="" class="term d-flex">
+                                <input class="borde" type="text" class="form-control" id="mortgageTerm">
+                                <label class="ancho" for="">years</label>
+                            </label>
                         </div>
                         <div class="mb-3">
-                            <label for="interestRate" class="form-label">Interest Rate</label>
-                            <input type="number" class="form-control" id="interestRate" placeholder="%">
+                            <label for="interestRate" class="form-label color_text">Interest Rate</label>
+                            <label for="" class="rate d-flex">
+                                <input class="borde" type="text" class="form-control" id="interestRate"
+                                    placeholder="">
+                                <label class="anio ancho" for="">%</label>
+                            </label>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="mortgageType" class="form-label">Mortgage Type</label>
-                        <div class="d-flex flex-column my-4">
-                            <div>
-                                <input type="radio" id="repayment" name="mortgageType" value="repayment" checked>
-                                <label for="repayment" class="me-3">Repayment</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="interestOnly" name="mortgageType" value="interestOnly">
-                                <label for="interestOnly">Interest Only</label>
+                        <label for="mortgageType" class="form-label color_text">Mortgage Type</label>
+                        <div class="d-flex flex-column my-3">
+                            <div class="d-flex flex-column gap-3">
+                                <label class="radio_btn d-flex px-3 gap-3" for="">
+                                    <input type="radio" id="repayment" name="mortgageType" value="repayment">
+                                    <label for="repayment" class="d-flex align-items-center">Repayment</label>
+                                </label>
+                            
+                                <label class="radio_btn d-flex px-3 gap-3" for="">
+                                    <input type="radio" id="interestOnly" name="mortgageType" value="interestOnly">
+                                    <label for="interestOnly" class="d-flex align-items-center">Interest Only</label>
+                                </label>
                             </div>
 
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 custom-button my-4">Calculate Repayments</button>
+                    <button type="submit" class="btn btn-primary w-100 custom-button my-3">
+                        <img src="./images/icon-calculator.svg" alt="">
+                        Calculate Repayments</button>
                 </form>
             </div>
             <div class="card_result card tamaño w-100 h-100 fondo d-flex align-items-center justify-content-center">

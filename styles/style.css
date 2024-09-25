@@ -4,24 +4,43 @@
     background-color: #e3f4fc;
 }
 
-.moneda{
-    display: flex;
+.moneda, .term, .rate, .radio_btn{
     width: 100%;
     height: 40px;
-    border: solid 1px grey;
+    border: solid 1px #b9ccd2;
     padding-inline: .25rem;
     border-radius: .5rem;
+    accent-color: #d9d94a;
 
+}
+
+.moneda:focus-within,
+.term:focus-within,
+.rate:focus-within,
+.radio_btn:focus-within
+{
+    border: solid 2px #d9d94a;
+    background-color: #fafae1;
+    
 }
 
 .moneda > svg {
     background-color: #e3f4fc;
+    
 }
 
-.moneda > input{
+.borde{
     width: 100%;
     border: none;
     outline: none;
+}
+
+.ancho{
+    display: flex;
+    width: 40%;
+    background-color: #e3f4fc;
+    align-items: center;
+    justify-content: center;
 }
 
 .derecha {
@@ -47,10 +66,14 @@
     background-color: #f2cf23;
 }
 
+.color_text{
+    color: #b9ccd2;
+}
+
 @media (min-width: 768px) {
     .card_container {
         width: 1000px !important;
-        height: 500px !important;
+        height: 550px !important;
     }
 
     .tamaño {
