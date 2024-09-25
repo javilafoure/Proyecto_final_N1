@@ -70,6 +70,14 @@
     color: #b9ccd2;
 }
 
+.result{
+    background-color: #0f2431;
+    box-shadow: 0 -5px #d9d94a;
+}
+
+.hidden{
+    display: none;
+}
 @media (min-width: 768px) {
     .card_container {
         width: 1000px !important;
