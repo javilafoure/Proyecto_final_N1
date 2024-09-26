@@ -56,12 +56,12 @@
                         <div class="d-flex flex-column my-3">
                             <div class="d-flex flex-column gap-3">
                                 <label class="radio_btn d-flex px-3 gap-3" for="">
-                                    <input type="radio" id="repayment" name="mortgageType" value="">
+                                    <input type="radio" id="repayment" name="opt" value="repayment">
                                     <label for="repayment" class="d-flex align-items-center">Repayment</label>
                                 </label>
                             
                                 <label class="radio_btn d-flex px-3 gap-3" for="">
-                                    <input type="radio" id="interestOnly" name="mortgageType" value="interestOnly">
+                                    <input type="radio" id="interestOnly" name="opt" value="Interest Only">
                                     <label for="interestOnly" class="d-flex align-items-center">Interest Only</label>
                                 </label>
                             </div>
@@ -83,10 +83,10 @@
                     </div>
                     <div class="card result p-4 mt-4 results">
                         <label for="" class="form-label color_text">Your monthly repayments</label>
-                        <label for="" id="mensualidad"><span>£</span></label>
+                        <label class="fs-5 fw-bold" for="" id="mensualidad"></label>
                         <hr>
                         <label for="" class="form-label color_text">Total you'll repay over the term</label>
-                        <label for="" id="total"><span>£</span></label>
+                        <label class="fw-bold" for="" id="total"></label>
                         
                     </div>
                 </div>

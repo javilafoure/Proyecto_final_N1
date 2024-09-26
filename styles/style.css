@@ -74,6 +74,11 @@
     box-shadow: 0 -5px #d9d94a;
 }
 
+#mensualidad{
+    color: #d9d94a;
+    
+}
+
 .hidden{
     display: none;
 }

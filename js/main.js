@@ -10,17 +10,23 @@ function calcular() {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        // form.innerHTML = ''
 
         const formData = new FormData(form)
 
-        let P = parseFloat(formData.get('monto'));
+        let p = parseFloat(formData.get('monto'));
         let r = parseFloat(formData.get('tasa')) * 12;
         let n = parseInt(formData.get('cuota')) * 12;
 
-        console.log(P);
-        console.log(r);
-        console.log(n);
+        let m = (p * r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)
+
+        if (formData.get('opt') === 'repayment') {
+            mensualidad.textContent = '£ ' + (m / 12)
+            total.textContent = '£ ' + m
+        } else {
+            console.log(formData.get('opt'));
+            mensualidad.textContent = '£ ' + ((m - p) / 12)
+            total.textContent = '£ ' + (m - p)
+        }
     })
 }
 
@@ -32,14 +38,3 @@ btn_clear.addEventListener('click', (e) => {
     form.elements['tasa'].value = '';
     form.elements['cuota'].value = '';
 })
-
-// total.textContent += 'hola mundo'
-
-// montos.addEventListener('input', ()=>{
-//     console.log(montos.value);
-// })
-
-// M = Pago mensual.
-// P = Monto del préstamo.
-// r = Tasa de interés mensual (tasa de interés anual dividida por 12).
-// n = Número total de pagos (número de años multiplicado por 12).
