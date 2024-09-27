@@ -79,13 +79,18 @@
     
 }
 
-.hidden{
+#resultado{
     display: none;
 }
+
+#message{
+    display: none;
+}
+
 @media (min-width: 768px) {
     .card_container {
         width: 1000px !important;
-        height: 550px !important;
+        height: 600px !important;
     }
 
     .tamaño {

@@ -30,7 +30,9 @@
                                     d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                             <input class="borde w-100" name="monto" type="text">
+                            
                         </label>
+                        <span class="text-danger invisible" id="alert_monto">This field is required</span>
                     </div>
                     <div class="d-md-flex justify-content-md-between gap-3">
                         <div class="mb-3">
@@ -38,8 +40,8 @@
                             <label for="" class="dato d-flex">
                                 <input class="borde w-75" type="text" class="form-control" name="cuota">
                                 <span class="d-flex w-25 align-items-center justify-content-center fw-bold">Years</span>
-                                
                             </label>
+                            <span class="text-danger invisible" id="alert_year">This field is required</span>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label color_text">Interest Rate</label>
@@ -47,8 +49,8 @@
                                 <input class="borde w-75" type="text" class="form-control" name="tasa"
                                     placeholder="">
                                     <span class="d-flex w-25 align-items-center justify-content-center fw-bold">%</span>
-
                             </label>
+                            <span class="text-danger invisible" id="alert_interest">This field is required</span>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -56,7 +58,7 @@
                         <div class="d-flex flex-column my-3">
                             <div class="d-flex flex-column gap-3">
                                 <label class="radio_btn d-flex px-3 gap-3" for="">
-                                    <input type="radio" id="repayment" name="opt" value="repayment">
+                                    <input type="radio" id="repayment" name="opt" value="repayment" >
                                     <label for="repayment" class="d-flex align-items-center">Repayment</label>
                                 </label>
                             
@@ -65,6 +67,7 @@
                                     <label for="interestOnly" class="d-flex align-items-center">Interest Only</label>
                                 </label>
                             </div>
+                            <span class="text-danger invisible" id="alert_opt">This field is required</span>
 
                         </div>
                     </div>
@@ -74,20 +77,25 @@
                 </form>
             </div>
             <div class="card_result card tamaño w-100 h-100 fondo d-flex align-items-center justify-content-center">
-                <div class="d-flex flex-column px-5">
-                    <div class="text-left">
-                        <img src="./images/illustration-empty.svg" alt="Results Illustration" class="hidden mb-3">
-                        <h4>Your results</h4>
-                        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would
-                            be.</p>
+                <div class="flex-column px-5">
+                    <div class="d-flex flex-column justify-content-center align-items-center" id="message">
+                        <img src="./images/illustration-empty.svg" alt="Results Illustration" class="w-50 h-50 mb-3">
+                        <h4>Results shown here</h4>
+                        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
                     </div>
-                    <div class="card result p-4 mt-4 results">
-                        <label for="" class="form-label color_text">Your monthly repayments</label>
-                        <label class="fs-5 fw-bold" for="" id="mensualidad"></label>
-                        <hr>
-                        <label for="" class="form-label color_text">Total you'll repay over the term</label>
-                        <label class="fw-bold" for="" id="total"></label>
-                        
+                    <div class="flex-column" id="resultado">
+                        <h4>Your results</h4>
+                            <p>Complete the form and click "calculate repayments" to see what your monthly repayments would
+                                be.</p>
+                        <div class="card  result p-4 mt-4 results" >
+                            
+                            <label for="" class="form-label color_text">Your monthly repayments</label>
+                            <label class="fs-5 fw-bold" for="" id="mensualidad"></label>
+                            <hr>
+                            <label for="" class="form-label color_text">Total you'll repay over the term</label>
+                            <label class="fw-bold" for="" id="total"></label>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
