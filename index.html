@@ -23,13 +23,13 @@
                 <form>
                     <div class="mb-3">
                         <label for="" class="form-label color_text">Mortgage Amount</label>
-                        <label for="" class="dato d-flex justify-content-between" id="monto_deuda">
+                        <label for="" class="dato d-flex justify-content-between errorSpan" id="monto_deuda">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
-                            <input class="borde w-100" name="monto" type="text">
+                            <input class="borde w-100 h-100" name="monto" type="text">
                             
                         </label>
                         <span class="text-danger invisible" id="alert_monto">This field is required</span>
@@ -37,7 +37,7 @@
                     <div class="d-md-flex justify-content-md-between gap-3">
                         <div class="mb-3">
                             <label for="" class="form-label color_text">Mortgage Term</label>
-                            <label for="" class="dato d-flex">
+                            <label for="" class="dato d-flex" id="cuotaNun">
                                 <input class="borde w-75" type="text" class="form-control" name="cuota">
                                 <span class="d-flex w-25 align-items-center justify-content-center fw-bold">Years</span>
                             </label>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label color_text">Interest Rate</label>
-                            <label for="" class="dato d-flex">
+                            <label for="" class="dato d-flex" id="tasa">
                                 <input class="borde w-75" type="text" class="form-control" name="tasa"
                                     placeholder="">
                                     <span class="d-flex w-25 align-items-center justify-content-center fw-bold">%</span>

@@ -5,7 +5,7 @@
     background-color: #e3f4fc;
 }
 
-.dato{
+.dato {
     width: 100%;
     height: 40px;
     border: solid 1px #b9ccd2;
@@ -15,7 +15,7 @@
     background-color: #e3f4fc;
 }
 
-.radio_btn{
+.radio_btn {
     width: 100%;
     height: 40px;
     border: solid 1px #b9ccd2;
@@ -25,26 +25,29 @@
 }
 
 .dato:focus-within,
-.radio_btn:focus-within
-{
+.radio_btn:focus-within {
     border: solid 2px #d9d94a;
     background-color: #fafae1;
-    
+
 }
 
-.dato.alert
-{
-    border: solid 2px red;
-    background-color: rgba(255, 0, 0, 0.342);
-    
+.errorMensaje {
+    background-color: hsl(3, 69%, 50%);
+    color: white;
+    border: solid 1px hsl(3, 69%, 50%);
+    display: flex;
 }
 
-.borde{
+#monto_deuda>input {
+    height: 40px;
+}
+
+.borde {
     border: none;
     outline: none;
 }
 
-.ancho{
+.ancho {
     display: flex;
     width: 40%;
     background-color: #e3f4fc;
@@ -75,25 +78,25 @@
     background-color: #f2cf23;
 }
 
-.color_text{
+.color_text {
     color: #b9ccd2;
 }
 
-.result{
+.result {
     background-color: #0f2431;
     box-shadow: 0 -5px #d9d94a;
 }
 
-#mensualidad{
+#mensualidad {
     color: #d9d94a;
-    
+
 }
 
-#resultado{
+#resultado {
     display: none;
 }
 
-#message{
+#message {
     display: none;
 }
 

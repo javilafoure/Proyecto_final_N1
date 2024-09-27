@@ -10,6 +10,8 @@ const alert_year = document.querySelector('#alert_year')
 const alert_interest = document.querySelector('#alert_interest')
 const alert_opt = document.querySelector('#alert_opt')
 const monto_deuda = document.querySelector('#monto_deuda')
+const cuotaNun = document.querySelector('#cuotaNun')
+const tasa = document.querySelector('#tasa')
 
 btn_calcular.addEventListener('click', calcular);
 
@@ -21,7 +23,7 @@ form.addEventListener('input', () => {
 
     let monto = (formData.get('monto').replace(/[^0-9,.]/, ""))
     let tasa = formData.get('tasa').replace(/[^0-9.]/, "")
-    
+
 
 
     if (monto.indexOf('.') !== -1) {
@@ -58,12 +60,15 @@ function calcular() {
 
         if (isNaN(p)) {
             alert_monto.classList.remove('invisible')
+            monto_deuda.classList.add('errorMensaje')
 
         } if (isNaN(r)) {
             alert_interest.classList.remove('invisible')
+            cuotaNun.classList.add('errorMensaje')
         }
         if (isNaN(n)) {
             alert_year.classList.remove('invisible')
+            tasa.classList.add('errorMensaje')
         }
         if (formData.get('opt') === null) {
             alert_opt.classList.remove('invisible')
@@ -113,5 +118,8 @@ function clear() {
     alert_year.classList.add('invisible')
     alert_interest.classList.add('invisible')
     alert_opt.classList.add('invisible')
+    monto_deuda.classList.remove('errorMensaje')
+    cuotaNun.classList.remove('errorMensaje')
+    tasa.classList.remove('errorMensaje')
 
 }
