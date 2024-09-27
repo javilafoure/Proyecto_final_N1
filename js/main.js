@@ -75,7 +75,7 @@ function calcular() {
         } else {
 
             let m = (p * r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)
-
+            
             if (formData.get('opt') === 'repayment') {
                 mensualidad.textContent = '£ ' + (m / 12)
                 total.textContent = '£ ' + m
