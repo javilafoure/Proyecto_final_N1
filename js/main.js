@@ -9,6 +9,7 @@ const alert_monto = document.querySelector('#alert_monto')
 const alert_year = document.querySelector('#alert_year')
 const alert_interest = document.querySelector('#alert_interest')
 const alert_opt = document.querySelector('#alert_opt')
+const monto_deuda = document.querySelector('#monto_deuda')
 
 btn_calcular.addEventListener('click', calcular);
 
@@ -18,8 +19,9 @@ form.addEventListener('input', () => {
     clear()
 
 
-    let monto = formData.get('monto').replace(/[^0-9,.]/, "")
+    let monto = (formData.get('monto').replace(/[^0-9,.]/, ""))
     let tasa = formData.get('tasa').replace(/[^0-9.]/, "")
+    
 
 
     if (monto.indexOf('.') !== -1) {
@@ -38,7 +40,6 @@ form.addEventListener('input', () => {
 
     form.elements['monto'].value = monto
     form.elements['tasa'].value = tasa
-
     form.elements['cuota'].value = formData.get('cuota').replace(/[^0-9]/, "")
 })
 
@@ -57,8 +58,8 @@ function calcular() {
 
         if (isNaN(p)) {
             alert_monto.classList.remove('invisible')
-        }
-        if (isNaN(r)) {
+
+        } if (isNaN(r)) {
             alert_interest.classList.remove('invisible')
         }
         if (isNaN(n)) {
@@ -68,20 +69,21 @@ function calcular() {
             alert_opt.classList.remove('invisible')
         } else {
 
+            let m = (p * r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)
+
+            if (formData.get('opt') === 'repayment') {
+                mensualidad.textContent = '£ ' + (m / 12)
+                total.textContent = '£ ' + m
+            } else {
+                mensualidad.textContent = '£ ' + ((m - p) / 12)
+                total.textContent = '£ ' + (m - p)
+            }
+            show()
+
         }
 
-        let m = (p * r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)
-
-        if (formData.get('opt') === 'repayment') {
-            mensualidad.textContent = '£ ' + (m / 12)
-            total.textContent = '£ ' + m
-        } else {
-            console.log(formData.get('opt'));
-            mensualidad.textContent = '£ ' + ((m - p) / 12)
-            total.textContent = '£ ' + (m - p)
-        }
     })
-    show()
+
 
 }
 
